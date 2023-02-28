@@ -1,0 +1,164 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    scroll-behavior: smooth;
+  }
+  // Typograpy
+  @font-face {
+    font-family: "BlackHanSans";
+    src: url(./resources/fonts/BlackHanSans-Regular.woff) format("woff");
+    font-weight: 400;
+  }
+  @font-face {
+    font-family: "BlackOpsOne";
+    src: url(./resources/fonts/BlackOpsOne-Regular.woff) format("woff");
+    font-weight: 400;
+  }
+  @font-face {
+    font-family: "PottaOne";
+    src: url(./resources/fonts/PottaOne-Regular.woff) format("woff");
+    font-weight: 400;
+  }
+  @font-face {
+    font-family: "CrescentRegular";
+    src: url(./resources/fonts/CRESCENT-Regular.woff) format("woff");
+    font-weight: 400;
+  }
+  .font-notoSans {
+    font-family: "Noto Sans";
+  }
+}
+
+@layer base {
+  input[type="number"]::-webkit-inner-spin-button,
+  input[type="number"]::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+  }
+
+  ::-webkit-scrollbar {
+    -webkit-appearance: none;
+    width: 7px;
+  }
+
+  ::-webkit-scrollbar-thumb {
+    border-radius: 4px;
+    background-color: rgba(166, 166, 166, 0.5);
+  }
+
+  .text-primary-set {
+    color: #c3e5ed !important;
+    text-shadow: 0 0 5px #7d9296, 0 0 10px #7d9296, 0 0 20px #7d9296,
+      0 0 40px #7d9296, 0 0 80px #7d9296;
+  }
+
+  .text-shadow-none {
+    text-shadow: none;
+  }
+
+  .demo-transition {
+    animation: opacity 0.5s ease-in-out;
+  }
+
+  .slow-transition {
+    animation: opacity 4s ease-in-out;
+  }
+
+  .malicious-magrin-bg {
+    position: relative;
+    // background-image: url("https://64.media.tumblr.com/957cd2cb944886b1f936cebce4fc7498/tumblr_o8gy3bcDUN1srh7n4o1_500.gif");
+
+    // filter: hue-rotate(255deg);
+  }
+  .malicious-magrin-bg:before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -2;
+    width: 100%;
+    height: 100%;
+    background-color: black;
+    background-position: bottom;
+    background-repeat: no-repeat;
+    background-image: url("https://64.media.tumblr.com/957cd2cb944886b1f936cebce4fc7498/tumblr_o8gy3bcDUN1srh7n4o1_500.gif");
+    filter: hue-rotate(195deg);
+  }
+
+  @keyframes opacity {
+    0% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 1;
+    }
+  }
+
+  .center {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #000;
+  }
+  .wave {
+    width: 5px;
+    height: 60px;
+    background: linear-gradient(45deg, cyan, #fff);
+    margin: 10px;
+    animation: wave 1s linear infinite;
+    border-radius: 20px;
+  }
+  .wave:nth-child(2) {
+    animation-delay: 0.1s;
+  }
+  .wave:nth-child(3) {
+    animation-delay: 0.2s;
+  }
+  .wave:nth-child(4) {
+    animation-delay: 0.3s;
+  }
+  .wave:nth-child(5) {
+    animation-delay: 0.4s;
+  }
+  .wave:nth-child(6) {
+    animation-delay: 0.5s;
+  }
+  .wave:nth-child(7) {
+    animation-delay: 0.6s;
+  }
+  .wave:nth-child(8) {
+    animation-delay: 0.7s;
+  }
+  .wave:nth-child(9) {
+    animation-delay: 0.8s;
+  }
+  .wave:nth-child(10) {
+    animation-delay: 0.9s;
+  }
+
+  @keyframes wave {
+    0% {
+      transform: scale(0);
+    }
+    50% {
+      transform: scale(1);
+    }
+    100% {
+      transform: scale(0);
+    }
+  }
+
+  .factorial-gradient-bg {
+    background: linear-gradient(
+        90deg,
+        rgba(0, 148, 255, 0) 22.68%,
+        rgba(0, 148, 255, 0.14) 84.14%,
+        rgba(0, 148, 255, 0.21) 100%
+      ),
+      #333333;
+  }
+}
